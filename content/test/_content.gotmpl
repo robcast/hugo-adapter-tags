@@ -1,0 +1,18 @@
+{{/*
+  Content Adapter test.
+*/}}
+  {{/* set up md page */}}
+  {{ $content := dict 
+    "mediaType" "text/markdown" 
+    "value" "Hello world!" }}
+  {{ $title := "Hello" }}
+  {{ $tags := slice "tag1" "tag2" }}
+  {{ $page := dict
+    "path" "hello"
+    "kind" "page"
+    "title" $title
+    "categories" $tags
+    "content" $content
+  }}
+  {{/* create page */}}
+  {{ $.AddPage $page }}
