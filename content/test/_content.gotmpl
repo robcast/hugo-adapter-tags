@@ -7,11 +7,12 @@
     "value" "Hello world! (This should have tags 'tag1' and 'tag2')" }}
   {{ $title := "Hello" }}
   {{ $tags := slice "tag1" "tag2" }}
+  {{/* only works when tags is in params */}}
   {{ $page := dict
     "path" "hello"
     "kind" "page"
     "title" $title
-    "tags" $tags
+    "params" (dict "tags" $tags)
     "content" $content
   }}
   {{/* create page */}}
