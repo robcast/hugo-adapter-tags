@@ -4,14 +4,14 @@
   {{/* set up md page */}}
   {{ $content := dict 
     "mediaType" "text/markdown" 
-    "value" "Hello world!" }}
+    "value" "Hello world! (This should have tags 'tag1' and 'tag2')" }}
   {{ $title := "Hello" }}
   {{ $tags := slice "tag1" "tag2" }}
   {{ $page := dict
     "path" "hello"
     "kind" "page"
     "title" $title
-    "categories" $tags
+    "tags" $tags
     "content" $content
   }}
   {{/* create page */}}
